@@ -72,10 +72,33 @@ a {
   color: var(--color-white);
 }
 
+button {
+  background-color: transparent;
+  cursor: pointer;
+  border: calc(var(--size-border-radius) * 0.5) solid var(--color-white);
+  border-radius: var(--size-border-radius);
+  padding: 8px 12px;
+  margin: 20px 0px 0px 0px;
+  font-weight: var(--weight-bold);
+}
+
+button.dark_grey {
+  border: calc(var(--size-border-radius) * 0.5) solid var(--color-dark-grey);
+  color: var(--color-dark-grey);
+  transition: 
+  background-color .3s,
+  color .3s;
+}
+
+button.dark_grey:hover {
+  background-color: var(--color-dark-grey);
+  color:var(--color-white);
+}
+
 .inner {
   width: 1100px;
   margin: auto;
-  background-color: orange;
+
 }
 
 #navbar {
@@ -108,21 +131,43 @@ a {
 }
 
 #navbar .navbar__menu .navbar__menu__item.active {
-  border: 1px solid var(--color-white);
+  border: 2px solid var(--color-white);
   
 }
 
 #navbar .navbar__menu .navbar__menu__item:hover {
   background-color: royalblue;
-  border: 1px solid var(--color-white);
+  border: 2px solid var(--color-white);
 }
 
 #home {
-  background-color: orchid;
+  background-image: url("./imgs/home-background.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 40px;
 }
 
+#home .inner {
+  text-align: center;
+}
+
+#home .home__myImg {
+  border-radius: 50%;
+  border: 2px solid var(--color-light-white);
+} 
+
+#home .home__title,
+.home__description {
+  color: var(--color-dark-grey);
+}
+
+#home .home_contact {
+}
+
+
 #about {
-  background-color: palegoldenrod;
+  
 }
 
 #skills {
