@@ -502,11 +502,6 @@ button.dark_grey:hover {
   background-color: var(--color-light-white);
 }
 
-
-#contact {
-  background-color: royalblue;
-}
-
 .testimonials {
   display: flex;
   flex-direction: column;
@@ -548,4 +543,33 @@ button.dark_grey:hover {
 
 .testimonial:nth-child(2n) {
   flex-direction: row-reverse;
+}
+
+#contact {
+  background-color: royalblue;
+}
+
+#contact h1,
+#contact h2,
+#contact p {
+  color: var(--color-white);
+}
+
+.contact__links {
+  display: flex;
+  justify-content: center;
+}
+
+.contact__links a {
+  margin: 5px;
+}
+
+.contact__links i {
+  font-size: 70px;
+  margin: 10px;
+}
+
+.contact__links img {
+  height: 70px;
+  margin: 10px;
 }
