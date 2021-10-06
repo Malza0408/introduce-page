@@ -14,6 +14,8 @@
   --color-orange: #feb546;
   --color-black:#000000;
   --color-apricot: #faa370;
+  --color-dark-cyan: #81b9bf;
+  --color-light-cyan: #4bacb8;
 
   /* font-size */
   --font-large: 48px;
@@ -107,9 +109,35 @@ button.dark_grey:hover {
 }
 
 #navbar {
-  background-color: var(--color-pink);
-  
+  width: 100%;
+  position: fixed;
+  background-color: transparent;
+  transition: all var(--delay-transition-color);
 }
+
+#navbar a,
+#navbar .navbar__menu {
+  color: var(--color-dark-grey);
+}
+
+#navbar .navbar__menu li:hover {
+  color: var(--color-white);
+}
+
+#navbar.active {
+  background-color: var(--color-dark-cyan);
+  z-index: 1;
+}
+
+#navbar.active a, 
+#navbar.active li {
+  color: var(--color-white);
+}
+
+#navbar.active .inner {
+  padding: 10px;
+}
+
 #navbar .inner {
   display: flex;
   justify-content: space-between;
@@ -128,6 +156,7 @@ button.dark_grey:hover {
   flex-direction: row;
 }
 
+
 .navbar__menu__item {
   padding: 8px 12px;
   margin: 0px 4px;
@@ -137,10 +166,12 @@ button.dark_grey:hover {
   transition: all var(--delay-transition-color);
 }
 
+
 .navbar__menu__item.active,
 .navbar__menu__item:hover {
-  background-color: var(--color-dark-pink);
+  background-color: var(--color-light-cyan);
   border-color: var(--color-white);
+  color: #000000;
 }
 
 #home {
@@ -149,6 +180,7 @@ button.dark_grey:hover {
   background-position: center;
   background-size: cover;
   padding: 40px;
+  padding-top: 120px;
 }
 
 #home .inner {
