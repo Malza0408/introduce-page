@@ -160,16 +160,16 @@
       <h1>My work</h1>
       <h3>Projects</h3>
       <div class="myWork__list">
-        <button class="list__btn active"><span class="list__category">All</span> <span
+        <button class="list__btn active" data-type="all"><span class="list__category">All</span> <span
             class="list__count">4</span></button>
-        <button class="list__btn"><span class="list__category">Front-end</span> <span
+        <button class="list__btn" data-type="frontend"><span class="list__category">Front-end</span> <span
             class="list__count">4</span></button>
-        <button class="list__btn"><span class="list__category">Back-end</span> <span
+        <button class="list__btn" data-type="backend"><span class="list__category">Back-end</span> <span
             class="list__count">0</span></button>
       </div>
       <div class="myWork__projects">
         <!-- My Home Page -->
-        <a href="#!" class="project" target="_blank">
+        <a href="#!" class="project" target="_blank" data-type="frontend">
           <img class="project__img" src="./imgs/projects/starbucks.png" alt="">
           <div class="project__description">
             <h3>My Homepage</h3>
@@ -177,7 +177,7 @@
           </div>
         </a>
         <!-- Starbucks page -->
-        <a href="#!" class="project" target="_blank">
+        <a href="#!" class="project" target="_blank" data-type="frontend">
           <img class="project__img" src="./imgs/projects/starbucks.png" alt="">
           <div class="project__description">
             <h3>Starbucks</h3>
@@ -185,7 +185,7 @@
           </div>
         </a>
         <!-- ShoppingMall page -->
-        <a href="#!" class="project" target="_blank">
+        <a href="#!" class="project" target="_blank" data-type="frontend">
           <img class="project__img" src="./imgs/projects/shoppingmall.png" alt="">
           <div class="project__description">
             <h3>ShoppingMall</h3>
@@ -193,7 +193,14 @@
           </div>
         </a>
         <!-- Pint JS -->
-        <a href="#!" class="project" target="_blank">
+        <a href="#!" class="project" target="_blank" data-type="frontend">
+          <img class="project__img" src="./imgs/projects/paingJs.png" alt="">
+          <div class="project__description">
+            <h3>Paint</h3>
+            <span>Clone Coding with html and css</span>
+          </div>
+        </a>
+        <a href="#!" class="project" target="_blank" data-type="backend">
           <img class="project__img" src="./imgs/projects/paingJs.png" alt="">
           <div class="project__description">
             <h3>Paint</h3>
@@ -250,6 +257,7 @@
       <p class="contact__rights">2021 Malza' Homepage - All rights reserved</p>
     </div>
   </section>
+  <div class="arrow-up"><i class="fas fa-arrow-circle-up"></i></div>
 
 </body>
 

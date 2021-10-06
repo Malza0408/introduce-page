@@ -428,6 +428,7 @@ button.dark_grey:hover {
   position: relative;
   left: 11px;
   transition: left var(--delay-transition-color);
+  pointer-events: none;
 }
 
 .list__btn:hover .list__category,
@@ -468,13 +469,20 @@ button.dark_grey:hover {
   top: 0px;
 }
 
-
 .myWork__projects {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  align-content: flex-start;
   width: 80%;
   margin: auto;
+  transition: all var(--delay-transition-color);
+  transform: scale(1) translateY(0);
+  opacity: 1;
+}
+
+.myWork__projects.playAnim {
+  transform: scale(0.98) translateY(20px);
+  opacity: 0;
 }
 
 .project {
@@ -486,7 +494,10 @@ button.dark_grey:hover {
   height: 250px;
   background-color: var(--color-light-white);
   position: relative;
-  margin-right: auto;
+}
+
+.project.hidden {
+  display: none;
 }
 
 .project .project__img {
@@ -604,4 +615,15 @@ button.dark_grey:hover {
 .contact__links img {
   height: 70px;
   margin: 10px;
+}
+
+.arrow-up {
+  position: fixed;
+  font-size: 60px;
+  color: var(--color-dark-cyan);
+  right: 100px;
+  bottom: 80px;
+  cursor: pointer;
+  opacity: 0;
+  transition: all var(--delay-transition-color);
 }
