@@ -9,6 +9,8 @@ const arrowUp = document.querySelector('.arrow-up');
 const projectListBtn = document.querySelectorAll('.list__btn');
 const myWorkProject = document.querySelector('.myWork__projects');
 const projects = document.querySelectorAll('.project');
+const contactRights = document.querySelector('.contact__rights');
+const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
 
 
 // Scroll Magic 을 이용한 Scrolling
@@ -41,20 +43,36 @@ window.addEventListener('scroll',  (evenet) => {
   } else {
     navbar.classList.remove('active');
   }
+  // arrowUp 활성화
   if (scrollY > 100) {
-    arrowUp.style.opacity = 1;
+    arrowUp.classList.add('show');
   } else {
-    arrowUp.style.opacity = 0;
+    arrowUp.classList.remove('show');
   }
+
   // Scroll 시 각 section 투명하게
   const foggy = document.querySelectorAll('.foggy');
   const lastEl = foggy[foggy.length - 1];
-  if (lastEl) {
-    const elHeight = lastEl.getBoundingClientRect().height;
-    const y = lastEl.getBoundingClientRect().y;
-    lastEl.style.opacity = 1 - (Math.abs(y) / elHeight);
+  if (window.matchMedia("(min-width: 769px)").matches) {
+    if (lastEl) {
+      const elHeight = lastEl.getBoundingClientRect().height;
+      const y = lastEl.getBoundingClientRect().y;
+      let opacity = 1 - (Math.abs(y) / elHeight);
+      if (opacity > 0.95) opacity = 1;
+      lastEl.style.opacity = opacity;
+    }
+  } else {
+    foggy.forEach(fog => {
+      fog.style.opacity = 1;
+    })
   }
 });
+
+
+// 작은 사이즈에서 navbar toggle 버튼
+navbarToggleBtn.addEventListener('click', (event) => {
+  navbarMenu.classList.toggle('open');
+})
 
 // navbar_menu click 시 해당 section으로 scroll
 navbarMenu.addEventListener('click', (event) => {
@@ -63,6 +81,10 @@ navbarMenu.addEventListener('click', (event) => {
   const seleted = target.dataset.selected;
   const menu = document.querySelector(seleted);
   menu.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+
+  const activeNavbar = document.querySelector('.navbar__menu__item.active');
+  activeNavbar.classList.remove('active');
+  target.classList.add('active');
 })
 
 // contactMe 버튼 click 시 contactMe 로 scroll
@@ -107,3 +129,64 @@ projectListBtn.forEach(list => {
     }, 300);
   })
 })
+
+const sectionIds = [
+  '#home',
+  '#about',
+  '#skills',
+  '#myWork',
+  '#testimonials',
+  '#contact',
+];
+
+const sections = sectionIds.map(id => document.querySelector(id));
+const navItems = sectionIds.map((id) =>
+  document.querySelector(`[data-selected="${id}"]`)
+);
+
+let selectedNavIndex = 0;
+let selectedNavItem = navItems[0];
+function selectNavItem(selected) {
+  selectedNavItem.classList.remove('active');
+  selectedNavItem = selected;
+  selectedNavItem.classList.add('active');
+}
+
+
+const callback = (entries, observer) => {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting && entry.intersectionRatio > 0) {
+      const index = sectionIds.indexOf(`#${entry.target.id}`);
+      // 스크롤링이 아래로 되어서 페이지가 올라옴
+      if (entry.boundingClientRect.y < 0) {
+        selectedNavIndex = index + 1;
+      } else {
+        selectedNavIndex = index - 1;
+      }
+    }
+  });
+};
+
+const observer = new IntersectionObserver(callback, {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.3,
+});
+
+// 각 section을 observe
+sections.forEach((section) => observer.observe(section));
+// scroll 은 모든 스크롤을 포함하기때문에 wheel 로 한다. 사용자가 스크롤링 할 때만 적용
+window.addEventListener('wheel', () => {
+  if (window.scrollY == 0) {
+    selectedNavIndex = 0;
+  } else if (
+    Math.round(window.scrollY + window.innerHeight) >=
+    document.body.clientHeight
+  ) {
+    selectedNavIndex = navItems.length - 1;
+  }
+  selectNavItem(navItems[selectedNavIndex]);
+});
+
+const date = new Date();
+contactRights.innerText = `${date.getFullYear()} Malza' Homepage - All rights reserved`;

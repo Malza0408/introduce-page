@@ -30,8 +30,12 @@
       <div class="navbar__logo">
         <a href="/">Malza's Home</a>
       </div>
+      <!-- Toggle button -->
+      <button class="navbar__toggle-btn">
+        <i class="fas fa-bars"></i>
+      </button>
       <ul class="navbar__menu">
-        <li class="navbar__menu__item" data-selected="#home">Home</li>
+        <li class="navbar__menu__item active" data-selected="#home">Home</li>
         <li class="navbar__menu__item" data-selected="#about">About</li>
         <li class="navbar__menu__item" data-selected="#skills">Skills</li>
         <li class=" navbar__menu__item" data-selected="#myWork">My work</li>
@@ -55,10 +59,11 @@
     </div>
   </section>
   <!-- About -->
-  <section id="about" class="scroll-spy section ">
+  <section id="about" class="scroll-spy section">
     <div class=" inner">
       <h1>About Me</h1>
-      <p>매일 매일이 쌓여 가치를 창출해 내는 개발자가 되길 바라는 예비 개발자입니다. 매일 매일 기록하고, 그를 통해 성장합니다. <br /> 모르는 문제가 나와도 피하지 않고 즐겁게 해결하려고 합니다.
+      <p>매일 매일이 쌓여 가치를 창출해 내는 개발자가 되길 바라는 예비 개발자입니다. <br /> 매일 매일 기록하고, 그를 통해 성장합니다. <br /> 모르는 문제가 나와도 피하지 않고 즐겁게 해결하려고
+        합니다.
       </p>
       <div class="about__stack">
         <div class="stack">
@@ -169,15 +174,15 @@
       </div>
       <div class="myWork__projects">
         <!-- My Home Page -->
-        <a href="#!" class="project" target="_blank" data-type="frontend">
-          <img class="project__img" src="./imgs/projects/starbucks.png" alt="">
+        <a href="https://github.com/Malza0408/introduce-page" class="project" target="_blank" data-type="frontend">
+          <img class="project__img" src="./imgs/projects/myWebsite.png" alt="">
           <div class="project__description">
             <h3>My Homepage</h3>
             <span>introduction page with html and css</span>
           </div>
         </a>
         <!-- Starbucks page -->
-        <a href="#!" class="project" target="_blank" data-type="frontend">
+        <a href="https://github.com/Malza0408/starbucks" class="project" target="_blank" data-type="frontend">
           <img class="project__img" src="./imgs/projects/starbucks.png" alt="">
           <div class="project__description">
             <h3>Starbucks</h3>
@@ -185,7 +190,7 @@
           </div>
         </a>
         <!-- ShoppingMall page -->
-        <a href="#!" class="project" target="_blank" data-type="frontend">
+        <a href="https://github.com/Malza0408/shopping-mall" class="project" target="_blank" data-type="frontend">
           <img class="project__img" src="./imgs/projects/shoppingmall.png" alt="">
           <div class="project__description">
             <h3>ShoppingMall</h3>
@@ -193,18 +198,26 @@
           </div>
         </a>
         <!-- Pint JS -->
-        <a href="#!" class="project" target="_blank" data-type="frontend">
+        <a href="https://github.com/Malza0408/paintjs" class="project" target="_blank" data-type="frontend">
           <img class="project__img" src="./imgs/projects/paingJs.png" alt="">
           <div class="project__description">
             <h3>Paint</h3>
             <span>Clone Coding with html and css</span>
           </div>
         </a>
-        <a href="#!" class="project" target="_blank" data-type="backend">
+        <!-- overwatch -->
+        <a href="https://github.com/Malza0408/overwatch-scss" class="project" target="_blank" data-type="frontend">
+          <img class="project__img" src="./imgs/projects/overwatch.png" alt="">
+          <div class="project__description">
+            <h3>Overwatch</h3>
+            <span>Clone Coding with html and scss</span>
+          </div>
+        </a>
+        <a href="#" class="project" target="_blank" data-type="backend">
           <img class="project__img" src="./imgs/projects/paingJs.png" alt="">
           <div class="project__description">
-            <h3>Paint</h3>
-            <span>Clone Coding with html and css</span>
+            <h3>This is Test Image</h3>
+            <span>아직 프론트 엔드를 공부중입니다. :)</span>
           </div>
         </a>
       </div>
@@ -254,11 +267,10 @@
           <img src="./imgs/notion.png" alt="">
         </a>
       </div>
-      <p class="contact__rights">2021 Malza' Homepage - All rights reserved</p>
+      <p class="contact__rights"></p>
     </div>
   </section>
-  <div class="arrow-up"><i class="fas fa-arrow-circle-up"></i></div>
-
+  <button class="arrow-up"><i class="fas fa-arrow-circle-up"></i></button>
 </body>
 
 </html>

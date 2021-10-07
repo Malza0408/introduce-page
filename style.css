@@ -30,7 +30,9 @@
   --weight-regular: 400;
 
   --size-border-radius: 4px;
+  --size-rotate-image: 300px;
   --delay-transition-color: .4s;
+  --padding-section : 40px;
 }
 
 * {
@@ -151,6 +153,10 @@ button.dark_grey:hover {
   font-weight: var(--weight-semi-bold);
 }
 
+.navbar__toggle-btn {
+  display: none;
+}
+
 .navbar__menu {
   display: flex;
   flex-direction: row;
@@ -162,7 +168,6 @@ button.dark_grey:hover {
   margin: 0px 4px;
   cursor: pointer;
   border-radius: var(--size-border-radius);
-  border: solid 1px transparent;
   transition: all var(--delay-transition-color);
 }
 
@@ -170,8 +175,7 @@ button.dark_grey:hover {
 .navbar__menu__item.active,
 .navbar__menu__item:hover {
   background-color: var(--color-light-cyan);
-  border-color: var(--color-white);
-  color: #000000;
+  color: var(--color-white);
 }
 
 #home {
@@ -238,7 +242,7 @@ button.dark_grey:hover {
 }
 
 .section {
-  padding: 40px;
+  padding: var(--padding-section);
   text-align: center;
 }
 
@@ -623,7 +627,218 @@ button.dark_grey:hover {
   color: var(--color-dark-cyan);
   right: 100px;
   bottom: 80px;
-  cursor: pointer;
   opacity: 0;
   transition: all var(--delay-transition-color);
+}
+
+.arrow-up.show {
+  opacity: 1;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+@media screen and (max-width: 768px) {
+  /* Golbal */
+:root {
+  /* font-size */
+  --font-large: 32px;
+  --font-medium: 24px;
+  --font-regular: 18px;
+  --font-small: 10px;
+  --font-micro: 6px;
+}
+  .inner {
+    width: 100%;
+    margin: 0;
+  }
+  #navbar {
+    z-index: 1;
+    background-color: var(--color-dark-cyan);
+  }
+
+  #navbar .inner {
+    flex-direction: column;
+    position: relative;
+    padding: 10px;
+  }
+
+  .navbar__logo {
+    margin-right: auto;
+    margin-left: 4px;
+  }
+
+  .navbar__menu {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    position: relative;
+    z-index: 1000;
+    display: none;
+  }
+
+  .navbar__menu.open {
+    display: block;
+  }
+
+  .navbar__toggle-btn {
+    margin: 0 auto;
+    position: absolute;
+    top: 5px;
+    right: 6px;
+    border: none;
+    color: var(--color-dark-grey);
+    font-size: 24px;
+    display: block;
+  }
+
+  #home {
+    z-index: 0;
+  }
+
+  #home .inner {
+    text-align:center;
+    height: 500px;
+  }
+
+  .home__title {
+    font-size: var(--font-large);
+  }
+
+  .flexContainer {
+    justify-content: center;
+  }
+
+  .rotateImg {
+    width: 250px;
+    height: 250px;
+    perspective: 600px;
+  }
+
+  .rotateImg .home__logo,
+  .rotateImg .home__profile {
+    width: 250px;
+    height: 250px;
+  }
+
+  .project {
+    width: 45%;
+    margin: 0 auto 25px auto;
+  }
+
+  .arrow-up {
+    font-size: 40px;
+    right: 40px;
+    bottom: 40px;
+  }
+
+  #about .about__stack {
+    margin: 50px auto 10px auto;
+  }
+
+  .skillSet {
+    flex-direction: column;
+  }
+
+  .skillSet__right .tools {
+    padding-bottom: 10px;
+  }
+
+  .skillSet__right .etc {
+    padding-bottom: 10px;
+  }
+
+  .testimonial img {
+    align-self: center;
+  }
+}
+
+
+@media screen and (max-width: 360px) {
+  /* Golbal */
+  :root {
+    /* font-size */
+    --font-large: 24px;
+    --font-medium: 16px;
+    --font-regular: 12px;
+    --font-small: 6px;
+    --font-micro: 3px;
+  }
+  .inner {
+    width: 100%;
+    margin: 0;
+  }
+
+  .navbar__toggle-btn {
+    font-size: 15px;
+    right: 3px;
+  }
+
+  .section {
+    padding: 40px;
+  }
+
+  #home {
+    padding: 60px 40px 40px 40px;
+  }
+
+  #home .inner {
+    height: 500px;
+  }
+
+  #about .about__stack {
+    flex-wrap: wrap;
+    margin: 30px auto 0 auto;
+  }
+
+  .list__btn {
+    width: 100%;
+  }
+
+  .myWork__list {
+    margin: 0px auto 20px 0;
+  }
+
+  .myWork__projects {
+    margin: 0;
+    width: 100%;
+  }
+
+  .project {
+    width: 100%;    
+    margin-bottom: 20px;
+  }
+
+  .testimonials {
+    flex-direction: column;
+  }
+
+  .testimonial {
+    flex-direction: column;
+    margin-top: 0;
+  }
+
+  .testimonial .testimonial_img {
+    height: 110px;
+  }
+
+  .testimonial:nth-child(2n-1) {
+    
+  }
+  
+  .testimonial:nth-child(2n) {
+    flex-direction: column;
+    margin-top: 0;
+  }
+
+  .contact__links i {
+    font-size: 40px;
+    margin: 10px;
+  }
+  
+  .contact__links img {
+    height: 40px;
+    margin: 10px;
+  }
 }
