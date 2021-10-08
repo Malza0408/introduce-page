@@ -11,7 +11,7 @@ const myWorkProject = document.querySelector('.myWork__projects');
 const projects = document.querySelectorAll('.project');
 const contactRights = document.querySelector('.contact__rights');
 const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
-
+const workListCount = document.querySelectorAll('.list__count');
 
 // Scroll Magic 을 이용한 Scrolling
 // scroll 을 인지해서 각 section 에 도달했는지 체크
@@ -72,6 +72,21 @@ arrowUp.addEventListener('click', (event) => {
     behavior: 'smooth'
   })
 })
+
+let frontendCount = 0;
+let backendCount = 0;
+projects.forEach(project => {
+  if (project.dataset.type === "frontend") {
+    frontendCount++;
+  } else {
+    backendCount++;
+  }
+})
+
+// project list 의 count 값
+workListCount[0].innerText = `${frontendCount + backendCount}`;
+workListCount[1].innerText = `${frontendCount}`;
+workListCount[2].innerText = `${backendCount}`;
 
 // project list 구분별로 띄우기
 projectListBtn.forEach(list => {
