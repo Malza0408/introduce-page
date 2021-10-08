@@ -51,26 +51,18 @@ navbarToggleBtn.addEventListener('click', (event) => {
 navbarMenu.addEventListener('click', (event) => {
   if (event.target.dataset.selected === undefined) return;
   const target = event.target;
-  const seleted = target.dataset.selected;
-  const menu = document.querySelector(seleted);
-  menu.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
-
-  const activeNavbar = document.querySelector('.navbar__menu__item.active');
-  activeNavbar.classList.remove('active');
-  target.classList.add('active');
+  const selected = target.dataset.selected;
+  scrollIntoView(selected);
 })
 
 // contactMe 버튼 click 시 contactMe 로 scroll
 contactBtn.addEventListener('click', (event) => {
-  contactMe.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+  scrollIntoView('#contact');
 })
 
 // arrow btn 활성화
 arrowUp.addEventListener('click', (event) => {
-  scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  })
+  scrollIntoView('#home');
 })
 
 let frontendCount = 0;
@@ -138,6 +130,12 @@ function selectNavItem(selected) {
   selectedNavItem.classList.remove('active');
   selectedNavItem = selected;
   selectedNavItem.classList.add('active');
+}
+
+function scrollIntoView(selector) {
+  const scrollTo = document.querySelector(selector);
+  scrollTo.scrollIntoView({ behavior: 'smooth' });
+  selectNavItem(navItems[sectionIds.indexOf(selector)]);
 }
 
 const callback = (entries, observer) => {
