@@ -25,16 +25,6 @@ spyEls.forEach(function (spyEl) {
     .addTo(new ScrollMagic.Controller());
 });
 
-spyEls.forEach(function (spyEl) {
-  new ScrollMagic
-    .Scene({
-      triggerElement: spyEl,
-      triggerHook: -.3,
-    })
-    .setClassToggle(spyEl, 'foggy')    
-    .addTo(new ScrollMagic.Controller());
-});
-
 // Scroll 시 Navbar 버튼 배경색 생김
 window.addEventListener('scroll',  (evenet) => {
   if (scrollY > 0) {
@@ -48,23 +38,6 @@ window.addEventListener('scroll',  (evenet) => {
     arrowUp.classList.add('show');
   } else {
     arrowUp.classList.remove('show');
-  }
-
-  // Scroll 시 각 section 투명하게
-  const foggy = document.querySelectorAll('.foggy');
-  const lastEl = foggy[foggy.length - 1];
-  if (window.matchMedia("(min-width: 769px)").matches) {
-    if (lastEl) {
-      const elHeight = lastEl.getBoundingClientRect().height;
-      const y = lastEl.getBoundingClientRect().y;
-      let opacity = 1 - (Math.abs(y) / elHeight);
-      if (opacity > 0.95) opacity = 1;
-      lastEl.style.opacity = opacity;
-    }
-  } else {
-    foggy.forEach(fog => {
-      fog.style.opacity = 1;
-    })
   }
 });
 
@@ -152,7 +125,6 @@ function selectNavItem(selected) {
   selectedNavItem.classList.add('active');
 }
 
-
 const callback = (entries, observer) => {
   entries.forEach((entry) => {
     if (!entry.isIntersecting && entry.intersectionRatio > 0) {
@@ -172,6 +144,7 @@ const observer = new IntersectionObserver(callback, {
   rootMargin: '0px',
   threshold: 0.3,
 });
+
 
 // 각 section을 observe
 sections.forEach((section) => observer.observe(section));

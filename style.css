@@ -246,6 +246,7 @@ button.dark_grey:hover {
   text-align: center;
 }
 
+
 #about .about__stack {
   display: flex;
   justify-content: space-around;
@@ -325,6 +326,7 @@ button.dark_grey:hover {
 .skillSet {
   display: flex;
   margin: 20px;
+  box-shadow: 5px 5px 5px rgb(73, 72, 72);
 }
 
 .skillSet__title {
