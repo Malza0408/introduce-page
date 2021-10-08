@@ -636,10 +636,12 @@ button.dark_grey:hover {
   margin: 0;
   border: none;
   transition: all var(--delay-transition-color);
+  cursor:default;
 }
 
 .arrow-up.show {
   opacity: 1;
+  cursor: pointer;
 }
 
 
