@@ -37,7 +37,6 @@ ContactMe 버튼을 통해 해당 section으로 이동합니다.
 ## Testimonials
 언젠가 받아보고 싶은 추천글 section 입니다!😂
 
----
 ## Contact Me
 제 Github 와 Notion 의 링크, 그리고 이메일 주소가 있습니다.  
 [Notion으로 이동!](https://www.notion.so/3b5088f485664e5d86c74eaf786d5382)  
