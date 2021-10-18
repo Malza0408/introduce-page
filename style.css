@@ -588,10 +588,6 @@ button.dark_grey:hover {
   color: var(--color-light-gery);
 }
 
-.testimonial:nth-child(2n-1) {
-  
-}
-
 .testimonial:nth-child(2n) {
   flex-direction: row-reverse;
 }
@@ -827,10 +823,6 @@ button.dark_grey:hover {
 
   .testimonial .testimonial_img {
     height: 110px;
-  }
-
-  .testimonial:nth-child(2n-1) {
-    
   }
   
   .testimonial:nth-child(2n) {
