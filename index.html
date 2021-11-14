@@ -1,313 +1,471 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Malza's Home</title>
+    <meta
+      name="description"
+      content="This is my introduction page && portfolio! yeah!"
+    />
+    <meta name="author" content="Malza" />
+    <link rel="icon" type="image/png" href="./imgs/favicon.png" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Malza's Home</title>
-  <meta name="description" content="This is my introduction page && portfolio! yeah!">
-  <meta name="author" content="Malza">
-  <link rel="icon" type="image/png" href="./imgs/favicon.png">
+    <!-- 오픈 그래프 -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Malza's Home" />
+    <meta property="og:title" content="Malza's Home" />
+    <meta
+      property="og:description"
+      content="저의 소개를 담은 홈페이지 입니다!😆"
+    />
+    <meta property="og:image" content="./imgs/md_imgs/md_myWebsite.png" />
+    <meta property="og:url" content="https://malza0408.github.io/my-Website/" />
 
-  <!-- 오픈 그래프 -->
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Malza's Home" />
-  <meta property="og:title" content="Malza's Home" />
-  <meta property="og:description" content="저의 소개를 담은 홈페이지 입니다!😆" />
-  <meta property="og:image" content="./imgs/md_imgs/md_myWebsite.png" />
-  <meta property="og:url" content="https://malza0408.github.io/my-Website/" />
+    <!-- 트위터 카드 -->
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:site" content="Malza's Home" />
+    <meta property="twitter:title" content="Malza's Home" />
+    <meta
+      property="twitter:description"
+      content="저의 소개를 담은 홈페이지 입니다!😆"
+    />
+    <meta property="twitter:image" content="./imgs/md_imgs/md_myWebsite.png" />
+    <meta
+      property="twitter:url"
+      content="https://malza0408.github.io/my-Website/"
+    />
 
-  <!-- 트위터 카드 -->
-  <meta property="twitter:card" content="summary" />
-  <meta property="twitter:site" content="Malza's Home" />
-  <meta property="twitter:title" content="Malza's Home" />
-  <meta property="twitter:description" content="저의 소개를 담은 홈페이지 입니다!😆" />
-  <meta property="twitter:image" content="./imgs/md_imgs/md_myWebsite.png" />
-  <meta property="twitter:url" content="https://malza0408.github.io/my-Website/" />
+    <!-- 폰트어썸 및 구글폰트 -->
+    <script
+      src=" https://kit.fontawesome.com/8f81310c97.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- 스타일 초기화 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
 
-  <!-- 폰트어썸 및 구글폰트 -->
-  <script src=" https://kit.fontawesome.com/8f81310c97.js" crossorigin="anonymous">
-  </script>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-  <!-- 스타일 초기화 -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
-  <link rel="stylesheet" href="./style.css">
+    <!-- Scroll Magic~! -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"
+      integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- Main JS -->
+    <script src="./main.js" defer></script>
+  </head>
 
-  <!-- Scroll Magic~! -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"
-    integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <!-- Main JS -->
-  <script src="./main.js" defer></script>
-</head>
-
-<body>
-  
-  <!-- Navbar -->
-  <nav id="navbar">
-    <div class="inner">
-      <div class="navbar__logo">
-        <a href="#">Malza's Home</a>
+  <body>
+    <!-- Navbar -->
+    <nav id="navbar">
+      <div class="inner">
+        <div class="navbar__logo">
+          <a href="#">Malza's Home</a>
+        </div>
+        <!-- Toggle button -->
+        <button class="navbar__toggle-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul class="navbar__menu">
+          <li class="navbar__menu__item active" data-selected="#home">Home</li>
+          <li class="navbar__menu__item" data-selected="#about">About</li>
+          <li class="navbar__menu__item" data-selected="#skills">Skills</li>
+          <li class="navbar__menu__item" data-selected="#myWork">My work</li>
+          <li class="navbar__menu__item" data-selected="#testimonials">
+            Testimonials
+          </li>
+          <li class="navbar__menu__item" data-selected="#contact">Contact</li>
+        </ul>
       </div>
-      <!-- Toggle button -->
-      <button class="navbar__toggle-btn">
-        <i class="fas fa-bars"></i>
-      </button>
-      <ul class="navbar__menu">
-        <li class="navbar__menu__item active" data-selected="#home">Home</li>
-        <li class="navbar__menu__item" data-selected="#about">About</li>
-        <li class="navbar__menu__item" data-selected="#skills">Skills</li>
-        <li class=" navbar__menu__item" data-selected="#myWork">My work</li>
-        <li class="navbar__menu__item" data-selected="#testimonials">Testimonials</li>
-        <li class="navbar__menu__item" data-selected="#contact">Contact</li>
-      </ul>
-    </div>
-  </nav>
-  <!-- Home -->
-  <section id="home" class="scroll-spy">
-    <div class=" inner">
-      <div class="flexContainer">
-        <div class="rotateImg">
-          <img src="./imgs/logo.png" alt="Malza's logo image" class="home__logo">
-          <img src="./imgs/profile.png" alt="Malza's profile photo" class="home__profile">
-        </div>
-      </div>
-      <h1 class="home__title">Hello!<br />제 홈페이지에 방문하신 여러분을 환영합니다!</h1>
-      <h2 class="home__description">프론트엔드 개발자 타이틀을 얻기 위해 오늘도 전진중!</h2>
-      <button class="home_contact dark_grey">Contact me</button>
-    </div>
-  </section>
-  <!-- About -->
-  <section id="about" class="scroll-spy section">
-    <div class=" inner">
-      <h1>About Me</h1>
-      <p>매일 매일이 쌓여 가치를 창출해 내는 개발자가 되길 바라는 예비 개발자입니다. <br /> 매일 매일 기록하고, 그를 통해 성장합니다. <br /> 모르는 문제가 나와도 피하지 않고 즐겁게 해결하려고
-        합니다.
-      </p>
-      <div class="about__stack">
-        <div class="stack">
-          <div class="stack__icon">
-            <i class="fab fa-css3-alt"></i>
-            <div class="icon__blobs">
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
+    </nav>
+    <!-- Home -->
+    <section id="home" class="scroll-spy">
+      <div class="inner">
+        <div class="flexContainer">
+          <div class="rotateImg">
+            <img
+              src="./imgs/logo.png"
+              alt="Malza's logo image"
+              class="home__logo"
+            />
+            <img
+              src="./imgs/profile.png"
+              alt="Malza's profile photo"
+              class="home__profile"
+            />
           </div>
-          <h2 class="stack__title">HTML, CSS, JS</h2>
         </div>
+        <h1 class="home__title">
+          Hello!<br />제 홈페이지에 방문하신 여러분을 환영합니다!
+        </h1>
+        <h2 class="home__description">
+          프론트엔드 개발자 타이틀을 얻기 위해 오늘도 전진중!
+        </h2>
+        <button class="home_contact dark_grey">Contact me</button>
+      </div>
+    </section>
+    <!-- About -->
+    <section id="about" class="scroll-spy section">
+      <div class="inner">
+        <h1>About Me</h1>
+        <p>
+          매일 매일이 쌓여 가치를 창출해 내는 개발자가 되길 바라는 예비
+          개발자입니다. <br />
+          매일 매일 기록하고, 그를 통해 성장합니다. <br />
+          모르는 문제가 나와도 피하지 않고 즐겁게 해결하려고 합니다.
+        </p>
+        <div class="about__stack">
+          <div class="stack">
+            <div class="stack__icon">
+              <i class="fab fa-css3-alt"></i>
+              <div class="icon__blobs">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+            <h2 class="stack__title">HTML, CSS, JS</h2>
+          </div>
 
-        <div class="stack">
-          <div class="stack__icon">
-            <i class="fab fa-react"></i>
-            <div class="icon__blobs">
-              <div></div>
-              <div></div>
-              <div></div>
+          <div class="stack">
+            <div class="stack__icon">
+              <i class="fab fa-react"></i>
+              <div class="icon__blobs">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
             </div>
-          </div>
-          <h2 class="stack__title">React</h2>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Skills -->
-  <section id="skills" class="scroll-spy section ">
-    <div class="inner">
-      <h1>Skills</h1>
-      <h2>Skills & Attributes</h2>
-      <div class="skillSet">
-        <div class="skillSet__left">
-          <h3 class="skillSet__title">Skills</h3>
-          <div class="skill">
-            <div class="skill__description">
-              <span>HTML</span>
-              <span>85</span>
-            </div>
-            <div class="skill__bar">
-              <div class="skill__value HTML"></div>
-            </div>
-          </div>
-          <div class="skill">
-            <div class="skill__description">
-              <span>CSS</span>
-              <span>70</span>
-            </div>
-            <div class="skill__bar">
-              <div class="skill__value CSS"></div>
-            </div>
-          </div>
-          <div class="skill">
-            <div class="skill__description">
-              <span>JavaScript</span>
-              <span>70</span>
-            </div>
-            <div class="skill__bar">
-              <div class="skill__value JS"></div>
-            </div>
-          </div>
-          <div class="skill">
-            <div class="skill__description">
-              <span>C++</span>
-              <span>60</span>
-            </div>
-            <div class="skill__bar">
-              <div class="skill__value C"></div>
-            </div>
-          </div>
-        </div>
-        <div class="skillSet__right">
-          <div class="tools">
-            <h3 class="skillSet__title">Tools</h3>
-            <ul class="tools__list">
-              <li><span>Visual studio code</span></li>
-              <li><span>...</span></li>
-              <li><span>...</span></li>
-              <li><span>...</span></li>
-            </ul>
-          </div>
-          <div class="etc">
-            <h3 class="skillSet__title">Etc</h3>
-            <ul class="etx__list">
-              <li><span>Git</span></li>
-              <li><span></span></li>
-              <li><span></span></li>
-            </ul>
+            <h2 class="stack__title">React</h2>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  <!-- My Work -->
-  <section id="myWork" class="scroll-spy section ">
-    <div class="inner">
-      <h1>My work</h1>
-      <h3>Projects</h3>
-      <div class="myWork__list">
-        <button class="list__btn active" data-type="all"><span class="list__category">All</span> <span
-            class="list__count">4</span></button>
-        <button class="list__btn" data-type="frontend"><span class="list__category">Front-end</span> <span
-            class="list__count">4</span></button>
-        <button class="list__btn" data-type="backend"><span class="list__category">Back-end</span> <span
-            class="list__count">0</span></button>
-      </div>
-      <div class="myWork__projects">
-        <!-- My Home Page -->
-        <a href="https://github.com/Malza0408/introduce-page" class="project" target="_blank" data-type="frontend">
-          <img class="project__img" src="./imgs/projects/myWebsite.png" alt="">
-          <div class="project__description">
-            <h3>My Homepage</h3>
-            <span>introduction page with JS, HTML and CSS</span>
+    </section>
+    <!-- Skills -->
+    <section id="skills" class="scroll-spy section">
+      <div class="inner">
+        <h1>Skills</h1>
+        <h2>Skills & Attributes</h2>
+        <div class="skillSet">
+          <div class="skillSet__left">
+            <h3 class="skillSet__title">Skills</h3>
+            <div class="skill">
+              <div class="skill__description">
+                <span>HTML</span>
+                <span>85</span>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__value HTML"></div>
+              </div>
+            </div>
+            <div class="skill">
+              <div class="skill__description">
+                <span>CSS</span>
+                <span>80</span>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__value CSS"></div>
+              </div>
+            </div>
+            <div class="skill">
+              <div class="skill__description">
+                <span>JavaScript</span>
+                <span>80</span>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__value JS"></div>
+              </div>
+            </div>
+            <div class="skill">
+              <div class="skill__description">
+                <span>React</span>
+                <span>70</span>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__value React"></div>
+              </div>
+            </div>
+            <div class="skill">
+              <div class="skill__description">
+                <span>C++</span>
+                <span>60</span>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__value C"></div>
+              </div>
+            </div>
           </div>
-        </a>
-        <!-- ShoppingMall page -->
-        <a href="https://github.com/Malza0408/shopping-mall" class="project" target="_blank" data-type="frontend">
-          <img class="project__img" src="./imgs/projects/shoppingmall.png" alt="">
-          <div class="project__description">
-            <h3>ShoppingMall</h3>
-            <span>Clone Coding with JS, HTML and CSS</span>
-          </div>
-        </a>
-        <!-- Pint JS -->
-        <a href="https://github.com/Malza0408/paintjs" class="project" target="_blank" data-type="frontend">
-          <img class="project__img" src="./imgs/projects/paingJs.png" alt="">
-          <div class="project__description">
-            <h3>Paint</h3>
-            <span>Clone Coding with JS, HTML and CSS</span>
-          </div>
-        </a>
-        <!-- Shopping List -->
-        <a href="https://github.com/Malza0408/simple-shopping-list" class="project" target="_blank" data-type="frontend">
-          <img class="project__img" src="./imgs/projects/shopping_List.png" alt="">
-          <div class="project__description">
-            <h3>ShoppingList</h3>
-            <span>ShoppingList with JS, HTML and CSS</span>
-          </div>
-        </a>        
-        <!-- Starbucks page -->
-        <a href="https://github.com/Malza0408/starbucks" class="project" target="_blank" data-type="frontend">
-          <img class="project__img" src="./imgs/projects/starbucks.png" alt="">
-          <div class="project__description">
-            <h3>Starbucks</h3>
-            <span>Clone Coding with JS, HTML and CSS</span>
-          </div>
-        </a>
-        <!-- overwatch -->
-        <a href="https://github.com/Malza0408/overwatch-scss" class="project" target="_blank" data-type="frontend">
-          <img class="project__img" src="./imgs/projects/overwatch.png" alt="">
-          <div class="project__description">
-            <h3>Overwatch</h3>
-            <span>Clone Coding with JS, HTML and CSS</span>
-          </div>
-        </a>
-        <!-- carrotGame -->
-        <a href="https://github.com/Malza0408/find-carrot" class="project" target="_blank" data-type="frontend">
-          <img class="project__img" src="./imgs/projects/carrotGame.png" alt="">
-          <div class="project__description">
-            <h3>CarrotGame</h3>
-            <span>CarrotGame with JS, HTML and CSS</span>
-          </div>
-        </a>
-        <!-- backEnd -->
-        <a href="javascript:void(0)" class="project" target="_blank" data-type="backend">
-          <img class="project__img" src="./imgs/projects/paingJs.png" alt="">
-          <div class="project__description">
-            <h3>This is Test Image</h3>
-            <span>아직 프론트 엔드를 공부중입니다. :)</span>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
-  <!-- Testimonials -->
-  <section id="testimonials" class="scroll-spy section ">
-    <div class="inner">
-      <h1>Testimonials</h1>
-      <h3>See what they say about me</h3>
-      <div class="testimonials">
-        <div class="testimonial">
-          <img src="./imgs/testimonials/testimonial_1.png" alt="testimonial_1" class="testimonial_img">
-          <div class="testimonial__speech">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores fugit vel necessitatibus tempore
-              aspernatur obcaecati nihil possimus, deleniti molestiae unde sit officiis. Quod dolores itaque obcaecati
-              commodi amet illum doloremque.</p>
-            <p class="name">
-              <a href="javascript:void(0)">Malza__1</a>
-            </p>
-          </div>
-        </div>
-        <div class="testimonial">
-          <img src="./imgs/testimonials/testimonial_2.png" alt="testimonial_2" class="testimonial_img">
-          <div class="testimonial__speech">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores fugit vel necessitatibus tempore
-              aspernatur obcaecati nihil possimus, deleniti molestiae unde sit officiis. Quod dolores itaque obcaecati
-              commodi amet illum doloremque.</p>
-            <p class="name">
-              <a href="javascript:void(0)">Malza__2</a>
-            </p>
+          <div class="skillSet__right">
+            <div class="tools">
+              <h3 class="skillSet__title">Tools</h3>
+              <ul class="tools__list">
+                <li><span>Visual studio code</span></li>
+                <li><span>...</span></li>
+                <li><span>...</span></li>
+                <li><span>...</span></li>
+              </ul>
+            </div>
+            <div class="etc">
+              <h3 class="skillSet__title">Etc</h3>
+              <ul class="etx__list">
+                <li><span>Git</span></li>
+                <li><span></span></li>
+                <li><span></span></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  <!-- Contact Me -->
-  <section id="contact" class="scroll-spy section ">
-    <div class="inner">
-      <h1>Let's talk or Visit my notion!</h1>
-      <h2>parkjh04080@gmail.com</h2>
-      <div class="contact__links">
-        <a href="https://github.com/Malza0408" target="_blank">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="https://www.notion.so/3b5088f485664e5d86c74eaf786d5382" target="_blank">
-          <img src="./imgs/notion.png" alt="">
-        </a>
+    </section>
+    <!-- My Work -->
+    <section id="myWork" class="scroll-spy section">
+      <div class="inner">
+        <h1>My work</h1>
+        <h3>Projects</h3>
+        <div class="myWork__list">
+          <button class="list__btn active" data-type="all">
+            <span class="list__category">All</span>
+            <span class="list__count">4</span>
+          </button>
+          <button class="list__btn" data-type="frontend">
+            <span class="list__category">Front-end</span>
+            <span class="list__count">4</span>
+          </button>
+          <button class="list__btn" data-type="backend">
+            <span class="list__category">Back-end</span>
+            <span class="list__count">0</span>
+          </button>
+        </div>
+        <div class="myWork__projects">
+          <!-- My Home Page -->
+          <a
+            href="https://github.com/Malza0408/introduce-page"
+            class="project"
+            target="_blank"
+            data-type="frontend"
+          >
+            <img
+              class="project__img"
+              src="./imgs/projects/myWebsite.png"
+              alt=""
+            />
+            <div class="project__description">
+              <h3>My Homepage</h3>
+              <span>introduction page with JS, HTML and CSS</span>
+            </div>
+          </a>
+          <!-- ShoppingMall page -->
+          <a
+            href="https://github.com/Malza0408/shopping-mall"
+            class="project"
+            target="_blank"
+            data-type="frontend"
+          >
+            <img
+              class="project__img"
+              src="./imgs/projects/shoppingmall.png"
+              alt=""
+            />
+            <div class="project__description">
+              <h3>ShoppingMall</h3>
+              <span>Clone Coding with JS, HTML and CSS</span>
+            </div>
+          </a>
+          <!-- Pint JS -->
+          <a
+            href="https://github.com/Malza0408/paintjs"
+            class="project"
+            target="_blank"
+            data-type="frontend"
+          >
+            <img
+              class="project__img"
+              src="./imgs/projects/paingJs.png"
+              alt=""
+            />
+            <div class="project__description">
+              <h3>Paint</h3>
+              <span>Clone Coding with JS, HTML and CSS</span>
+            </div>
+          </a>
+          <!-- Shopping List -->
+          <a
+            href="https://github.com/Malza0408/simple-shopping-list"
+            class="project"
+            target="_blank"
+            data-type="frontend"
+          >
+            <img
+              class="project__img"
+              src="./imgs/projects/shopping_List.png"
+              alt=""
+            />
+            <div class="project__description">
+              <h3>ShoppingList</h3>
+              <span>ShoppingList with JS, HTML and CSS</span>
+            </div>
+          </a>
+          <!-- Starbucks page -->
+          <a
+            href="https://github.com/Malza0408/starbucks"
+            class="project"
+            target="_blank"
+            data-type="frontend"
+          >
+            <img
+              class="project__img"
+              src="./imgs/projects/starbucks.png"
+              alt=""
+            />
+            <div class="project__description">
+              <h3>Starbucks</h3>
+              <span>Clone Coding with JS, HTML and CSS</span>
+            </div>
+          </a>
+          <!-- overwatch -->
+          <a
+            href="https://github.com/Malza0408/overwatch-scss"
+            class="project"
+            target="_blank"
+            data-type="frontend"
+          >
+            <img
+              class="project__img"
+              src="./imgs/projects/overwatch.png"
+              alt=""
+            />
+            <div class="project__description">
+              <h3>Overwatch</h3>
+              <span>Clone Coding with JS, HTML and CSS</span>
+            </div>
+          </a>
+          <!-- carrotGame -->
+          <a
+            href="https://github.com/Malza0408/find-carrot"
+            class="project"
+            target="_blank"
+            data-type="frontend"
+          >
+            <img
+              class="project__img"
+              src="./imgs/projects/carrotGame.png"
+              alt=""
+            />
+            <div class="project__description">
+              <h3>CarrotGame</h3>
+              <span>CarrotGame with JS, HTML and CSS</span>
+            </div>
+          </a>
+          <!-- react youtube -->
+          <a
+            href="https://github.com/Malza0408/react-youtube"
+            class="project"
+            target="_blank"
+            data-type="frontend"
+          >
+            <img
+              class="project__img"
+              src="./imgs/projects/youtube.png"
+              alt=""
+            />
+            <div class="project__description">
+              <h3>React Youtube</h3>
+              <span>Youtube with Create React App</span>
+            </div>
+          </a>
+          <!-- backEnd -->
+          <a
+            href="javascript:void(0)"
+            class="project"
+            target="_blank"
+            data-type="backend"
+          >
+            <img
+              class="project__img"
+              src="./imgs/projects/paingJs.png"
+              alt=""
+            />
+            <div class="project__description">
+              <h3>This is back-end temporary Image</h3>
+              <span>아직 프론트 엔드를 공부중입니다. :)</span>
+            </div>
+          </a>
+        </div>
       </div>
-      <p class="contact__rights"></p>
-    </div>
-  </section>
-  <button class="arrow-up"><i class="fas fa-arrow-circle-up"></i></button>
-</body>
-
+    </section>
+    <!-- Testimonials -->
+    <section id="testimonials" class="scroll-spy section">
+      <div class="inner">
+        <h1>Testimonials</h1>
+        <h3>See what they say about me</h3>
+        <div class="testimonials">
+          <div class="testimonial">
+            <img
+              src="./imgs/testimonials/testimonial_1.png"
+              alt="testimonial_1"
+              class="testimonial_img"
+            />
+            <div class="testimonial__speech">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+                fugit vel necessitatibus tempore aspernatur obcaecati nihil
+                possimus, deleniti molestiae unde sit officiis. Quod dolores
+                itaque obcaecati commodi amet illum doloremque.
+              </p>
+              <p class="name">
+                <a href="javascript:void(0)">Malza__1</a>
+              </p>
+            </div>
+          </div>
+          <div class="testimonial">
+            <img
+              src="./imgs/testimonials/testimonial_2.png"
+              alt="testimonial_2"
+              class="testimonial_img"
+            />
+            <div class="testimonial__speech">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+                fugit vel necessitatibus tempore aspernatur obcaecati nihil
+                possimus, deleniti molestiae unde sit officiis. Quod dolores
+                itaque obcaecati commodi amet illum doloremque.
+              </p>
+              <p class="name">
+                <a href="javascript:void(0)">Malza__2</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Me -->
+    <section id="contact" class="scroll-spy section">
+      <div class="inner">
+        <h1>Let's talk or Visit my notion!</h1>
+        <h2>parkjh04080@gmail.com</h2>
+        <div class="contact__links">
+          <a href="https://github.com/Malza0408" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+          <a
+            href="https://www.notion.so/3b5088f485664e5d86c74eaf786d5382"
+            target="_blank"
+          >
+            <img src="./imgs/notion.png" alt="" />
+          </a>
+        </div>
+        <p class="contact__rights"></p>
+      </div>
+    </section>
+    <button class="arrow-up"><i class="fas fa-arrow-circle-up"></i></button>
+  </body>
 </html>

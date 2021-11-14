@@ -8,11 +8,11 @@
   --color-dark-pink: #ff6863;
   --color-dark-grey: #474646;
   --color-grey: #575757;
-  --color-light-gery:#7c7971;
+  --color-light-gery: #7c7971;
   --color-blue: #73aace;
   --color-yellow: #fff7d1;
   --color-orange: #feb546;
-  --color-black:#000000;
+  --color-black: #000000;
   --color-apricot: #faa370;
   --color-dark-cyan: #81b9bf;
   --color-light-cyan: #4bacb8;
@@ -33,8 +33,8 @@
 
   --size-border-radius: 4px;
   --size-rotate-image: 300px;
-  --delay-transition-color: .4s;
-  --padding-section : 40px;
+  --delay-transition-color: 0.4s;
+  --padding-section: 40px;
 }
 
 * {
@@ -71,7 +71,7 @@ p {
 
 body {
   line-height: 1.4;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   cursor: default;
 }
 
@@ -97,14 +97,13 @@ button {
 button.dark_grey {
   border: calc(var(--size-border-radius) * 0.5) solid var(--color-dark-grey);
   color: var(--color-dark-grey);
-  transition: 
-  background-color var(--delay-transition-color),
-  color var(--delay-transition-color);
+  transition: background-color var(--delay-transition-color),
+    color var(--delay-transition-color);
 }
 
 button.dark_grey:hover {
   background-color: var(--color-dark-grey);
-  color:var(--color-white);
+  color: var(--color-white);
 }
 
 .inner {
@@ -133,7 +132,7 @@ button.dark_grey:hover {
   z-index: 1;
 }
 
-#navbar.active a, 
+#navbar.active a,
 #navbar.active li {
   color: var(--color-white);
 }
@@ -164,7 +163,6 @@ button.dark_grey:hover {
   flex-direction: row;
 }
 
-
 .navbar__menu__item {
   padding: 8px 12px;
   margin: 0px 4px;
@@ -172,7 +170,6 @@ button.dark_grey:hover {
   border-radius: var(--size-border-radius);
   transition: all var(--delay-transition-color);
 }
-
 
 .navbar__menu__item.active,
 .navbar__menu__item:hover {
@@ -199,7 +196,6 @@ button.dark_grey:hover {
   height: 50%;
   display: flex;
   justify-content: center;
-  
 }
 
 .rotateImg {
@@ -248,7 +244,6 @@ button.dark_grey:hover {
   text-align: center;
 }
 
-
 #about .about__stack {
   display: flex;
   justify-content: space-around;
@@ -288,26 +283,26 @@ button.dark_grey:hover {
   border-radius: 100%;
   position: absolute;
   transform: scale(1.4) translateY(125%);
-  transition: all .7s ease;
+  transition: all 0.7s ease;
 }
 
-.icon__blobs> div:nth-child(1) {
+.icon__blobs > div:nth-child(1) {
   left: -5%;
 }
-.icon__blobs> div:nth-child(2) {
+.icon__blobs > div:nth-child(2) {
   left: 30%;
-  transition-delay: .06s;
+  transition-delay: 0.06s;
 }
-.icon__blobs> div:nth-child(3) {
+.icon__blobs > div:nth-child(3) {
   left: 66%;
-  transition-delay: .025s;
+  transition-delay: 0.025s;
 }
 
-.stack__icon:hover{
-  color:var(--color-white);
+.stack__icon:hover {
+  color: var(--color-white);
 }
 
-.stack__icon:hover .icon__blobs> div{
+.stack__icon:hover .icon__blobs > div {
   transform: scale(1.4) translateY(0) translateZ(0);
 }
 
@@ -322,7 +317,7 @@ button.dark_grey:hover {
 
 #skills {
   background-color: var(--color-yellow);
-  color:var(--color-white);
+  color: var(--color-white);
 }
 
 .skillSet {
@@ -362,7 +357,7 @@ button.dark_grey:hover {
   height: 8px;
   border-radius: var(--size-border-radius);
   background-color: var(--color-apricot);
-  transition: width 3.0s ease-out;
+  transition: width 3s ease-out;
 }
 
 .skill__value.HTML {
@@ -378,7 +373,7 @@ button.dark_grey:hover {
 }
 
 .show .skill__value.CSS {
-  width: 70%;
+  width: 80%;
 }
 
 .skill__value.JS {
@@ -386,6 +381,14 @@ button.dark_grey:hover {
 }
 
 .show .skill__value.JS {
+  width: 80%;
+}
+
+.skill__value.React {
+  width: 0%;
+}
+
+.show .skill__value.React {
   width: 70%;
 }
 
@@ -393,7 +396,7 @@ button.dark_grey:hover {
   width: 0px;
 }
 
-.show .skill__value.C  {
+.show .skill__value.C {
   width: 60%;
 }
 
@@ -426,10 +429,8 @@ button.dark_grey:hover {
   padding-right: 40px;
   border: 1px solid var(--color-light-gery);
   font-weight: var(--weight-semi-bold);
-  transition: 
-  background-color var(--delay-transition-color),
-  color var(--delay-transition-color),
-  border var(--delay-transition-color);
+  transition: background-color var(--delay-transition-color),
+    color var(--delay-transition-color), border var(--delay-transition-color);
 }
 
 .list__btn .list__category {
@@ -465,9 +466,8 @@ button.dark_grey:hover {
   position: relative;
   top: -20px;
   left: 3px;
-  transition: 
-  top var(--delay-transition-color),
-  opacity var(--delay-transition-color);
+  transition: top var(--delay-transition-color),
+    opacity var(--delay-transition-color);
   pointer-events: none;
 }
 
@@ -480,6 +480,8 @@ button.dark_grey:hover {
 .myWork__projects {
   display: flex;
   flex-wrap: wrap;
+  padding-left: auto;
+  /* justify-content: center; */
   align-content: flex-start;
   width: 80%;
   margin: auto;
@@ -497,7 +499,7 @@ button.dark_grey:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 3px;
+  margin: 3px calc(40px / 6) 3px calc(40px / 6);
   width: 280px;
   height: 250px;
   background-color: var(--color-light-white);
@@ -532,9 +534,8 @@ button.dark_grey:hover {
   transform: translateY(0);
 }
 
-
 .project__description h3::after {
-  content: '';
+  content: "";
   display: block;
   position: relative;
   left: 50%;
@@ -577,7 +578,7 @@ button.dark_grey:hover {
 .testimonial__speech p {
   margin: 25px;
   color: var(--color-light-gery);
-  text-align:start;
+  text-align: start;
 }
 
 .testimonial__speech p.name {
@@ -632,7 +633,7 @@ button.dark_grey:hover {
   margin: 0;
   border: none;
   transition: all var(--delay-transition-color);
-  cursor:default;
+  cursor: default;
 }
 
 .arrow-up.show {
@@ -640,17 +641,16 @@ button.dark_grey:hover {
   cursor: pointer;
 }
 
-
 @media screen and (max-width: 768px) {
   /* Golbal */
-:root {
-  /* font-size */
-  --font-large: 32px;
-  --font-medium: 24px;
-  --font-regular: 18px;
-  --font-small: 10px;
-  --font-micro: 6px;
-}
+  :root {
+    /* font-size */
+    --font-large: 32px;
+    --font-medium: 24px;
+    --font-regular: 18px;
+    --font-small: 10px;
+    --font-micro: 6px;
+  }
   .inner {
     width: 100%;
     margin: 0;
@@ -700,7 +700,7 @@ button.dark_grey:hover {
   }
 
   #home .inner {
-    text-align:center;
+    text-align: center;
     height: 500px;
   }
 
@@ -756,7 +756,6 @@ button.dark_grey:hover {
   }
 }
 
-
 @media screen and (max-width: 360px) {
   /* Golbal */
   :root {
@@ -808,7 +807,7 @@ button.dark_grey:hover {
   }
 
   .project {
-    width: 100%;    
+    width: 100%;
     margin-bottom: 20px;
   }
 
@@ -824,7 +823,7 @@ button.dark_grey:hover {
   .testimonial .testimonial_img {
     height: 110px;
   }
-  
+
   .testimonial:nth-child(2n) {
     flex-direction: column;
     margin-top: 0;
@@ -834,7 +833,7 @@ button.dark_grey:hover {
     font-size: 40px;
     margin: 10px;
   }
-  
+
   .contact__links img {
     height: 40px;
     margin: 10px;
