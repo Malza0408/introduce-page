@@ -365,7 +365,7 @@ button.dark_grey:hover {
 }
 
 .show .skill__value.HTML {
-  width: 85%;
+  width: 90%;
 }
 
 .skill__value.CSS {
@@ -373,7 +373,7 @@ button.dark_grey:hover {
 }
 
 .show .skill__value.CSS {
-  width: 80%;
+  width: 85%;
 }
 
 .skill__value.JS {
@@ -389,6 +389,14 @@ button.dark_grey:hover {
 }
 
 .show .skill__value.React {
+  width: 70%;
+}
+
+.skill__value.TS {
+  width: 0%;
+}
+
+.show .skill__value.TS {
   width: 70%;
 }
 
