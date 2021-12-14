@@ -109,6 +109,7 @@ button.dark_grey:hover {
 .inner {
   width: 1100px;
   margin: auto;
+  text-align: center;
 }
 
 #navbar {
@@ -187,7 +188,6 @@ button.dark_grey:hover {
 }
 
 #home .inner {
-  text-align: center;
   height: 650px;
 }
 
@@ -241,7 +241,11 @@ button.dark_grey:hover {
 
 .section {
   padding: var(--padding-section);
-  text-align: center;
+}
+
+.ts_image {
+  display: block;
+  margin: auto;
 }
 
 #about .about__stack {
@@ -425,7 +429,6 @@ button.dark_grey:hover {
 }
 
 #myWork {
-  text-align: center;
 }
 
 .myWork__list {
